@@ -1,30 +1,33 @@
+// Reverse an Array
+// we will be using 2 pointer approach // swap(arr[start], arr[end])
+// swap first and last element and move towards middle
+
 #include <iostream>
 using namespace std;
 
-// When an array is passed to a function in C++,
-// it is passed by reference by default. //address is passed
-// This means the function receives the memory address of the array,
-// not a copy of it.
+void reversearray(int arr[], int size){
+    int start = 0;
+    int end = size - 1;
 
-void modifyArray(int arr[], int size) {
-    // arr points to the same array that was created in main()
-
-    arr[0] = 100;        // changing array element
-    arr[1] = 200;        // changes will reflect in main()
+    while (start < end){
+        // swap
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
 }
 
-int main() {
-    int numbers[3] = {10, 20, 30};
+int main(){
+    int arr[] = {2, 4, 6, 8, 10};
+    int size = 5;
 
-    // Passing array to function
-    // Only the base address of the array is passed
-    modifyArray(numbers, 3);
+    reversearray(arr, size);
 
-    // Printing array after function call
-    cout << "Array after function call:\n";
-    for (int i = 0; i < 3; i++) {
-        cout << numbers[i] << " ";
+    // print reversed array
+    for (int i=0; i < size; i++){
+        cout << arr[i] << " ";
     }
-
     return 0;
 }
+
+// Time complexity is O(n)
