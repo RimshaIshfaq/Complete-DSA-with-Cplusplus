@@ -48,3 +48,6 @@ int main(){
 
 
 
+// static vs dynamic memory
+// static allocation is on compilation time // in stack
+// Dynamic memory is allocate don run time // in heap
