@@ -23,22 +23,30 @@ int main(){
     cin.getline(strm, 100, '$');
     cout << "output: " << strm << endl;
 
-    /* when we enter something using cin, it ignore everything after space, for example:
-    if i give it "hello world", it will take "hello" only and ignore everything after space,
-    so in case of string we use: cin.getline(str,len,delime?)
-    str === string, we wanna enter
-    len === length of string
-    delim? === delimiter
-    */
+    // /* when we enter something using cin, it ignore everything after space, for example:
+    // if i give it "hello world", it will take "hello" only and ignore everything after space,
+    // so in case of string we use: cin.getline(str,len,delime?)
+    // str === string, we wanna enter
+    // len === length of string
+    // delim? === delimiter
+    // */
 
-    /* String is dynamic in nature, becuase it can be updated in runtime 
-        Data is stored in contagious manner */
+    // /* String is dynamic in nature, becuase it can be updated in runtime 
+    //     Data is stored in contagious manner */
 
-    string me="rimsha isbfaq";
+    string me="rimsha ishfaq";
 
     cout << me << endl;
     me = "engineering girl";
     cout << me << endl;
+    // Concatenation in strings
+
+    string me1 = "my name is";
+    string me2 = "rimsha  ishfaq";
+    cout << (me1 + me2) << endl;
+    cout << (me1 == me2) << endl; //0
+    cout << (me1 > me2) << endl; //0
+
     return 0;
 }
 
